@@ -1,0 +1,308 @@
+@import 'normalize.css'
+@import '_variables'
+@import 'animations.css'
+
+
+*
+*:before
+*:after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+
+html
+  font-size 62.5%
+  height 100%
+  padding 0
+
+body
+  font-size 1.4rem
+  color #3C3C3C
+  font-family 'Exo', sans-serif
+  height 100%
+  padding 0
+  margin 0
+
+
+h1
+h2
+h3
+h4
+h5
+h6
+  margin 0
+  padding 0
+  color #444
+h1
+  font-size 3.6rem
+h2
+  font-size 2.6rem
+h3
+  font-size 2.2rem
+h4
+  font-size 1.8rem
+h5
+  font-size 1.4rem
+
+
+ul
+ol
+  list-style none
+  padding 0
+  margin 0
+
+
+a
+  text-decoration none
+  outline none
+
+
+.muted
+  color #CCC
+
+
+.hide
+  display none
+
+
+.sl-name
+  font-weight bold
+  small
+    font-weight normal
+    font-size 0.5em
+    margin-left 0.3em
+    position relative
+    bottom 0.7em
+
+
+.site-head
+  border-bottom 1px solid rgba(255,255,255,0.5)
+  .sl-name
+    float left
+    font-size 3rem
+    line-height 5.5rem
+.site-head__inner
+  overflow hidden
+  max-width $max-page-width
+  min-width $min-page-width
+  margin auto
+.site-head__right
+  overflow hidden
+  float right
+  li
+    float left
+    margin-left 1.5rem
+    &.divider
+      line-height 6rem
+  a
+    line-height 6rem
+    display block
+
+
+.site-foot
+  margin-top 8rem
+  background-color #222
+  color white
+  a
+    color white
+.site-foot__name
+  float left
+  line-height 4rem
+.site-foot__inner
+  overflow hidden
+  max-width $max-page-width
+  min-width $min-page-width
+  margin auto
+.site-foot__right
+  overflow hidden
+  float right
+  i
+    margin-right 0.5rem
+  li
+    float left
+    margin-left 1.5rem
+    &.divider
+      line-height 4rem
+  a
+    line-height 4rem
+    display block
+
+
+.splash-top
+  background-color $green
+  background-image url('../img/splash-top-bg.png')
+  background-repeat repeat
+  color white
+
+  .site-head
+    color white
+    a
+      color white
+.splash-top__inner
+  max-width $max-page-width
+  min-width $min-page-width
+  margin auto
+  text-align center
+  padding 7rem 0 3rem 0
+
+.splash__title
+.splash__subtitle
+  color #FFF
+.splash__subtitle
+  font-weight normal
+
+
+.invite-form
+  margin 7rem 0 0 0
+  input
+  button
+    border none
+    font-size 1.8rem
+    font-weight bold
+    padding 1.4rem 1.8rem 1.2rem
+  input
+    color $green
+    width 20rem
+  button
+    background $action-color
+    color white
+    margin-bottom 0.7rem
+    &:hover
+      background $action-color - 10%
+.no-spam
+  font-size 1.2rem
+  cursor default
+
+
+.splash-body
+  max-width $max-page-width
+  min-width $min-page-width
+  margin auto
+  text-align center
+
+
+.splash-body__header
+  overflow hidden
+  display inline-block
+  margin 6rem 0 4rem 0
+
+  li
+    border-bottom 0.3rem solid transparent
+    float left
+    padding 0.3rem 0.5rem
+    margin 0 2rem
+    font-size 2rem
+    cursor pointer
+
+    &:hover
+      border-color $action-color + 75%
+    &.on
+      border-color $action-color
+      cursor default
+
+.splash-body__groups
+  overflow hidden
+  text-align left
+  >li
+    display none
+    &.on
+      display block
+
+.splash-body__features
+  float left
+  width 25%
+  padding-top 2rem
+  p
+    margin 0.7rem 0 1.3rem 0
+  li
+    padding 0 2rem 1.5rem 3rem
+    position relative
+  .feature
+    position relative
+    .splash-body__features__mark
+    .splash-body__features__star
+      left -3rem
+.splash-body__features__mark
+.splash-body__features__star
+  position absolute
+  left 0
+  top 0.15rem
+  cursor default
+.splash-body__features__mark
+  width 2rem
+  height 2rem
+  text-align center
+  line-height 2rem
+  background $action-color
+  color white
+  border-radius 50%
+.splash-body__features__star
+  color $action-color
+  font-size 2rem
+
+.splash-feature-pane
+  float left
+  width 74%
+  background #D8D8D8
+  padding 0.5%
+  box-shadow 0 0 2px rgba(0,0,0,0.5)
+  position relative
+  img
+    width 100%
+    display block
+.feature-pane__marks
+  li
+    background #f5a623
+    border-radius 50%
+    color #fff
+    font-size 1.6rem
+    font-weight bold
+    height 3rem
+    line-height 3rem
+    position absolute
+    text-align center
+    width 3rem
+    box-shadow 0 0 2px rgba(0,0,0,0.3)
+    cursor default
+    opacity 0
+    transform scale(0.2)
+    transition all 0.3s cubic-bezier(0.000, 0.000, 0.4, 1.8)
+    &.on
+      opacity 1
+      transform scale(1)
+
+.feature-pane-1-1
+  top 22%
+  left 28%
+.feature-pane-1-2
+  top 34.5%
+  left 55%
+.feature-pane-2-1
+  top 8%
+  left 15%
+.feature-pane-2-2
+  top 49.5%
+  left 53%
+.feature-pane-2-3
+  top 70%
+  left 40.3%
+.feature-pane-2-4
+  top 23.4%
+  left 72%
+.feature-pane-2-5
+  top 48%
+  left 73%
+
+.feature-pane-3-1
+  top 8%
+  left 15%
+.feature-pane-3-2
+  top 17%
+  left 45%
+.feature-pane-3-3
+  top 54%
+  left 88%
+.feature-pane-3-4
+  top 83%
+  left 83%

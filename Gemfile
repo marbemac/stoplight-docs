@@ -16,3 +16,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem "middleman-deploy"
 gem "middleman-syntax"
 gem "redcarpet"
+
+gem 'stylus'
+gem 'slim'
+gem 'coffee-script'
