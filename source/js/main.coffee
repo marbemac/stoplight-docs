@@ -22,7 +22,6 @@ Zepto ->
 
   nextPane = ->
     next = $('.splash-body__header li.on').next()
-    console.log next
     if next.length > 0
       next.click()
     else
@@ -50,3 +49,36 @@ Zepto ->
   # ####
   # END Toggle feature panes on splash page
   # ####
+
+  $('.invite-form').submit (e) ->
+    e.preventDefault()
+
+    button = $(e.currentTarget).find('button')
+    currentButtonValue = button.text()
+
+    return if button.hasClass('disabled')
+
+    payload =
+      email: $(e.currentTarget).find('[name=email]').val()
+
+    if $.trim(payload.email).length == 0
+      alert('Please enter a valid email address.')
+      return
+
+    $.ajax
+      type: 'get' # GET for now, since POST is proving more difficult to handle on the server with JSONP
+      url: 'https://api.stoplight.io/invites'
+      data: payload
+      dataType: 'jsonp'
+      beforeSend: (xhr, settings) ->
+        button.text('working..').addClass('disabled')
+      error: (xhr, errorType, error) ->
+        alert('There was an error connecting to the StopLight API.')
+      complete: ->
+        button.text(currentButtonValue).removeClass('disabled')
+      success: (data, status, xhr) ->
+        if data.error.length
+          alert(data.error)
+        else
+          $('.invite-form').find('input,button,.no-spam').hide()
+          $('.invite-form__done').css('display','inline-block')
