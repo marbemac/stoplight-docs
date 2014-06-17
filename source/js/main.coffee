@@ -1,7 +1,9 @@
-//= require "vendor/_zepto.js"
+//= require "vendor/_jquery.js"
+//= require "vendor/_scrollspy.js"
+//= require "vendor/_affix.js"
 //= require "_plugins.js"
 
-Zepto ->
+jQuery ->
   $('.invite-form input').focus()
 
   # ####

@@ -57,6 +57,7 @@ ol
 a
   text-decoration none
   outline none
+  color $green
 
 
 .muted
@@ -323,3 +324,87 @@ a
 .feature-pane-3-4
   top 83%
   left 83%
+
+
+
+.docs__wrapper
+  max-width $max-page-width
+  min-width $min-page-width
+  position relative
+  margin 0 auto 20rem auto
+  overflow hidden
+
+.docs__nav
+  width 30%
+  float left
+  padding-left 6rem
+  margin-top 11rem
+  a
+    border-left 2px solid transparent
+    padding-left 1.5rem
+    display block
+
+  > li
+    margin-bottom 1.5rem
+
+    >a
+      color #999
+      font-size 1.8rem
+      padding-top 0.3rem
+      padding-bottom 0.3rem
+      &:hover
+        color $green
+        border-color $green + 50%
+    >ul
+      display none
+      >li
+        >a
+          color #999
+          font-size 1.4rem
+          padding-top 0.1rem
+          padding-bottom 0.1rem
+        &.active
+          >a
+            color $green
+            border-color $green
+        >a
+          &:hover
+            color $green
+            border-color $green + 50%
+    &.active
+      >a
+        color $green
+        font-weight bold
+        border-color $green
+      >ul
+        display block
+  &.affix
+    position fixed
+    top 0
+    margin-left 23rem
+    left 50%
+    margin-top 5rem
+
+.docs__content
+  width 70%
+  float left
+  margin-top -5rem
+
+  h1
+    border-bottom 1px solid #E9E9E9
+    padding-bottom 0.5rem
+    margin 10rem 0 2rem 0
+    i
+      margin-right 1.5rem
+  h2
+    color #666
+  p
+    font-size 1.5rem
+    line-height 2.4rem
+  img
+    background #f1f1f1
+    padding 1rem
+    width 60%
+    margin-bottom 2rem
+    &.full-width
+      width 100%
