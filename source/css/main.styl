@@ -152,10 +152,11 @@ a
   max-width $max-page-width
   min-width $min-page-width
   margin auto
+  position relative
 .page-header--splash
   .page-header__inner
     text-align center
-    padding 7rem 2rem 3rem 2rem
+    padding 6rem 2rem 3rem
 .page-header--docs
 .page-header--changelog
   .page-header__inner
@@ -181,6 +182,62 @@ a
   color #FFF
 .splash__subtitle
   font-weight normal
+.splash__overview-img
+  width 85%
+  display inline-block
+  margin 4rem 0 -10rem 0
+
+  img
+    width 100%
+    display block
+
+
+.browser
+  border-radius 10px
+  border 4px solid
+  border-color #CCC
+  border-color rgba(0,0,0,0.1)
+  position relative
+  overflow hidden
+  box-shadow 0 0 3px rgba(0,0,0,0.4)
+  .url-bar
+    padding 8px 8px 8px 65px
+    background #FFF
+  .dot
+    background #ffbf00
+    border-radius 100%
+    float left
+    height 10px
+    left 1.2em
+    line-height 10px
+    margin 0 10px
+    position absolute
+    top 16px
+    width 10px
+    &:before
+    &:after
+      background #d90000
+      border-radius 100%
+      content " "
+      float left
+      height 10px
+      line-height 10px
+      margin 0 5px
+      position absolute
+      right 100%
+      width 10px
+    &:after
+      background #00b285
+      left 100%
+      right auto
+  .address
+    background #eee
+    border-radius 2px
+    color #aaa
+    font-size 12px
+    height 25px
+    line-height 25px
+    text-indent 10px
 
 
 .js-register
@@ -200,7 +257,7 @@ a
 
 
 .invite-form
-  margin 7rem 0 0 0
+  margin 5rem 0 0 0
   input
   button
     border none
@@ -246,7 +303,7 @@ a
 .splash-body__header
   overflow hidden
   display inline-block
-  margin 6rem 0 4rem 0
+  margin 15rem 0 4rem 0
 
   li
     border-bottom 0.3rem solid transparent
