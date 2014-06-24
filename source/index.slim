@@ -2,147 +2,147 @@
 title: Home
 ---
 
-.splash-top
+.page-header.page-header--splash
   = partial 'partials/header'
 
-  .splash-top__inner
+  .page-header__inner
     h1.splash__title A Powerful HTTP Testing Tool
     h4.splash__subtitle Examine, share, and test your APIs in the cloud.
 
-    a.get-started href='https://dash.stoplight.io/register' Get Started
+    a.get-started.js-register href='https://dash.stoplight.io/register' Get Started
 
-    / form.invite-form.done
-    /   input name='email' type='email' placeholder='Email' autocomplete='off' spellcheck='off'
-    /   button Request Invite
-    /   .no-spam secret safe. no spam. ever.
-    /   .invite-form__done
-    /     | All set! In the meantime, follow
-    /     a href='https://twitter.com/stoplightio' = ' @StopLightio '
-    /     | for updates.
+    form.invite-form.done.js-beta-invite
+      input name='email' type='email' placeholder='Email' autocomplete='off' spellcheck='off'
+      button Request Invite
+      .no-spam secret safe. no spam. ever.
+      .invite-form__done
+        | All set! In the meantime, follow
+        a href='https://twitter.com/stoplightio' = ' @StopLightio '
+        | for updates.
 
-.splash-body
-  ul.splash-body__header
-    li.on Environments
-    li Endpoints
-    li Tests
+.page-content
+  .splash-body
+    ul.splash-body__header
+      li.on Environments
+      li Endpoints
+      li Tests
 
-  ul.splash-body__groups
-    li.on
-      ul.splash-body__features
-        li
-          h4 Local
-          .splash-body__features__mark 1
-          .feature
-            p
-              | Easily connect your local
-                environments with the
-              a href='https://github.com/marbemac/stoplight-cli' target='_blank' = ' StopLight CLI tool.'
-        li
-          h4 Environment Variables
-          .splash-body__features__mark 2
-          .feature
-            p
-              | Use the StopLight variables
-                system to set environment
-                specific variables for use
-                in your requests and tests.
-
-      .splash-feature-pane
-        img src='img/feature-pane-environments.png'
-        ul.feature-pane__marks
-          li.feature-pane-1-1 1
-          li.feature-pane-1-2 2
-    li
-      ul.splash-body__features
-        li
-          h4 Endpoints
-          .splash-body__features__mark 1
-          .feature
-            p ... are HTTP resources.
-        li
-          h4 Variables
-          .feature
+    ul.splash-body__groups
+      li.on
+        ul.splash-body__features
+          li
+            h4 Local
+            .splash-body__features__mark 1
+            .feature
+              p
+                | Easily connect your local
+                  environments with the
+                a href='https://github.com/marbemac/stoplight-cli' target='_blank' = ' StopLight CLI tool.'
+          li
+            h4 Environment Variables
             .splash-body__features__mark 2
-            p
-              | Use variables anywhere.
-                Parameters, headers, tests.
-          .feature
-            .splash-body__features__mark 3
-            p
-              | Set variables using any
-                data present in the request.
-                Variables are scoped to the
-                current user and environment.
-          .feature
-            .splash-body__features__mark 4
-            p
-              | Variables auto fill if present
-                in the current environment.
-        li
-          h4 History
-          .splash-body__features__mark 5
-          .feature
-            p
-              | View an endpoint’s request
-                history for the current
-                environment.
+            .feature
+              p
+                | Use the StopLight variables
+                  system to set environment
+                  specific variables for use
+                  in your requests and tests.
 
-      .splash-feature-pane
-        img src='img/feature-pane-endpoints.png'
-        ul.feature-pane__marks
-          li.feature-pane-2-1 1
-          li.feature-pane-2-2 2
-          li.feature-pane-2-3 3
-          li.feature-pane-2-4 4
-          li.feature-pane-2-5 5
+        .splash-feature-pane
+          img src='img/feature-pane-environments.png'
+          ul.feature-pane__marks
+            li.feature-pane-1-1 1
+            li.feature-pane-1-2 2
+      li
+        ul.splash-body__features
+          li
+            h4 Endpoints
+            .splash-body__features__mark 1
+            .feature
+              p ... are HTTP resources.
+          li
+            h4 Variables
+            .feature
+              .splash-body__features__mark 2
+              p
+                | Use variables anywhere.
+                  Parameters, headers, tests.
+            .feature
+              .splash-body__features__mark 3
+              p
+                | Set variables using any
+                  data present in the request.
+                  Variables are scoped to the
+                  current user and environment.
+            .feature
+              .splash-body__features__mark 4
+              p
+                | Variables auto fill if present
+                  in the current environment.
+          li
+            h4 History
+            .splash-body__features__mark 5
+            .feature
+              p
+                | View an endpoint’s request
+                  history for the current
+                  environment.
 
-    li
-      ul.splash-body__features
-        li
-          h4 Test Order
-          .splash-body__features__mark 1
-          .feature
-            p
-              | Drag and drop to update the
-                order in which tests are run.
-                Variables persist between tests.
-        li
-          h4 Scenarios
-          .splash-body__features__mark 2
-          .feature
-            p
-              | Create scenarios to test your
-                endpoints under a variety
-                of conditions.
-        li
-          h4 Tests
-          .feature
-            .splash-body__features__mark 3
-            p
-              | Write simple test scripts in
-                javascript. Scripts have access
-                to a special object, “SL”, that
-                contains request, response,
-                and variables data.
-          .feature
-            .splash-body__features__mark 4
-            p
-              | View the test history for the
-                current environment.
-          .feature
-            i.splash-body__features__star.fa.fa-star
-            p
-              | Run your entire test suite
-                with one click, for any
-                environment.
+        .splash-feature-pane
+          img src='img/feature-pane-endpoints.png'
+          ul.feature-pane__marks
+            li.feature-pane-2-1 1
+            li.feature-pane-2-2 2
+            li.feature-pane-2-3 3
+            li.feature-pane-2-4 4
+            li.feature-pane-2-5 5
 
-      .splash-feature-pane
-        img src='img/feature-pane-tests.png'
-        ul.feature-pane__marks
-          li.feature-pane-3-1 1
-          li.feature-pane-3-2 2
-          li.feature-pane-3-3 3
-          li.feature-pane-3-4 4
+      li
+        ul.splash-body__features
+          li
+            h4 Test Order
+            .splash-body__features__mark 1
+            .feature
+              p
+                | Drag and drop to update the
+                  order in which tests are run.
+                  Variables persist between tests.
+          li
+            h4 Scenarios
+            .splash-body__features__mark 2
+            .feature
+              p
+                | Create scenarios to test your
+                  endpoints under a variety
+                  of conditions.
+          li
+            h4 Tests
+            .feature
+              .splash-body__features__mark 3
+              p
+                | Write simple test scripts in
+                  javascript. Scripts have access
+                  to a special object, “SL”, that
+                  contains request, response,
+                  and variables data.
+            .feature
+              .splash-body__features__mark 4
+              p
+                | View the test history for the
+                  current environment.
+            .feature
+              i.splash-body__features__star.fa.fa-star
+              p
+                | Run your entire test suite
+                  with one click, for any
+                  environment.
 
-.splash-bottom
-  = partial 'partials/footer'
+        .splash-feature-pane
+          img src='img/feature-pane-tests.png'
+          ul.feature-pane__marks
+            li.feature-pane-3-1 1
+            li.feature-pane-3-2 2
+            li.feature-pane-3-3 3
+            li.feature-pane-3-4 4
+
+= partial 'partials/footer'

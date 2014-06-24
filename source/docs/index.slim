@@ -2,191 +2,204 @@
 title: Documentation
 ---
 
-= partial 'partials/header'
-
-.docs__wrapper
-
-  .docs__content
-    h1#welcome Welcome
-
-    p
-      | Thanks for checking out StopLight. These docs are very much a work in progress. If you have a question that is not covered here, please shoot me a note
-        on twitter
-      a href='https://twitter.com/stoplightio' target='_blank' = ' @stoplightio'
-      | !
-
-    h2#welcome-start Getting Started
-    p
-      | First things first. Do you have an account yet? If not, head over to
-      a href='http://stoplight.io' = ' StopLight.io '
-      | and request an invite. Invites are sent out often.
-    p
-      | If you do have an account, login at
-      a href='https://dash.stoplight.io' target='_blank' = ' the StopLight.io dashboard '
-      | and proceed below!
+.page-header.page-header--docs
+  = partial 'partials/header'
+  .page-header__inner
+    h1 Documentation
+    h2 A work in progress.
 
 
+.page-content
+  .docs__wrapper
 
-    h1#apps
-      i.fa.fa-cube
-      | Apps
-    p
-      | To create an app, click the + button in the top right of the Apps pane.
-    h2#apps-variables Global Variables
-    p
-      | Global variables are variables that can be set on a per environment basis. Define them in your app, and then set them when you setup your environments.
-        These variables can be used anywhere, in any request or test script. An example of a global variable might be an apiKey for an external service, that depends
-        on the environment.
+    .docs__content
+      h1#welcome Welcome
 
+      p
+        | Thanks for checking out StopLight. These docs are very much a work in progress. If you have a question that is not covered here, please shoot me a note
+          on twitter
+        a href='https://twitter.com/stoplightio' target='_blank' = ' @stoplightio'
+        | !
 
-    h1#environments
-      i.fa.fa-cloud
-      | Environments
-    p In StopLight, all requests and test runs are scoped to an app and environment. You can create as many environment as you want per app.
-    h2#environments-setup Setup
-    p
-      | Once you've created and selected an app, you should see a menu item in the left nav named "Environments". Click this, and then click the + button at
-        the top of the environments pane that appears on screen. This will create a new, blank environment for your app. Give it a name, and then set it's base URL.
-        You might want to create several environments, one for testing and one for production for example, that live at different base URLs.
-    h2#environments-variables Global Variables
-    p
-      | Global variables are defined on an app, as described above. You can set global variables to values appropriate for each environment. These variables are
-        available in requests and tests using the SL.variables system. More on that below.
-    h2#environments-local Local Environments
-    p
-      | To setup a local environment, please follow the instructions available at the
-      a href='https://github.com/marbemac/stoplight-cli' target='_blank' = ' StopLight CLI Tool '
-      | repository. Once you've setup your local environment, it will show up in the list of environments like any other.
+      p
+        | You can find the StopLight changelog
+        a href='/changelog' = ' here'
+        | .
+
+      h2#welcome-start Getting Started
+      p
+        | First things first. Do you have an account yet? If not, head over to
+        a href='http://stoplight.io' = ' StopLight.io '
+        | and request an invite. Invites are sent out often.
+      p
+        | If you do have an account, login at
+        a href='https://dash.stoplight.io' target='_blank' = ' the StopLight.io dashboard '
+        | and proceed below!
 
 
-    h1#endpoints
-      i.fa.fa-cloud-download
-      | Endpoints
-    p Endpoints represent individual HTTP resources in your API or app.
-    h2#endpoints-setup Setup
-    p
-      | Once you've created and selected an app, you should see a menu item in the left nav named "Endpoints". Click this, and then click the + button at
-        the top of the endpoints pane that appears on screen. This will create a new, blank endpoint for your app.
-    h2#endpoints-uri-params URI Params
-    p
-      | Often APIs routes include dynamic parts, for example an endpoint /users/marc and /users/john. In your application you might define this route
-        as /users/:username. In StopLight, if you would like to define a parameter in the URL itself, just wrap it in {brackets}. So, the URL above would be
-        described as /users/{username} in StopLight. You can include multiple URL parameters in one endpoint URL definition.
-    img src='/img/endpoints-uri-params.png'
-    h2#endpoints-variables Variables
-    p
-      | The StopLight variable system is quite flexible. You can assign persistent variables from endpoints and tests, and use these values to build other
-        requests.
-    P
-      | To assign a variable from an endpoint request, click the + button next to the "Variables" section on the endpoint edit pane. Anything in the request
-        is available to assign. Most of the time, you will be assigning values from SL.body, which is the body of the request response (what is returned from
-        your API). So, if your API returns a JSON response of the form {token: "123"}, you could create a variable called authToken and make the value equal to
-        SL.body.token. Whenenever a request is made for this endpoint, it will save this variable if possible. SL.variables is a JSON
-        object, so you can nest variables if you wish. For example, you could assign two variables, one to user.name, and another to user.email, and it will
-        create the appropriate structure.
-    img src='/img/endpoint-variables1.png'
-    p
-      | You can use variables pretty much anywhere. For example, to build a URL using a variable SL.variables.username, just define the url as something
-        like /users/{username}, and then put SL.variables.username as the default value for that URL parameter. If the value for that variable is present,
-        it will be used to create the URL when you make a request. If you need to use variables in a header, wrap the variable in {brackets}, for
-        example "Basic {SL.variables.authToken}".
-    p
-      | If present, variables will auto-fill your request info for you. You can always erase the auto-filled values and use your own if you choose.
-    img.full-width src='/img/endpoint-variables2.png'
-    h2#endpoints-requests Requests
-    p
-      | To make a request, you must first have an active environment. In the top nav, select an environment from the dropdown. Then, navigate to an endpoint
-        and click the "Make Request" button. Once the request is completed you can browse all of the data associated with the action.
-      b = ' Anything in the SL object (SL.request, SL.body, SL.response, etc) is available when assigning variables, and in your test scripts.'
-      | A request history is available for each environment.
-    img src='/img/endpoint-requests.png'
+
+      h1#apps
+        i.fa.fa-cube
+        | Apps
+      p
+        | To create an app, click the + button in the top right of the Apps pane.
+      h2#apps-variables Global Variables
+      p
+        | Global variables are variables that can be set on a per environment basis. Define them in your app, and then set them when you setup your environments.
+          These variables can be used anywhere, in any request or test script. An example of a global variable might be an apiKey for an external service, that depends
+          on the environment.
 
 
-    h1#tests
-      i.fa.fa-flask
-      | Tests
-    p Tests allow you to make requests against your endpoints in a particular order, under a variety of conditions and requirements.
-    h2#tests-setup Setup
-    p
-      | Once you've created a few endpoints, click the item in the left nav named "Tests". You should see your available endpoints listed here. Drag
-        and drop the endpoints to adjust the order in which they're tested.
-    h2#tests-script Scenarios
-    p
-      | Scenarios let you test an endpoint under a variety of conditions. For example, you might want to create one scenario to test wether providing
-        an inappropriate email address to the userCreate endpont returns a status code 400, and another scenario to test that it returns a user when sent valid
-        parameters.
-    p
-      | If you do not fill in values for your parameters, the default values assigned in the endpoint definition will be used. They default values are shown as
-        light placeholder text on the inputs, as shown in the image below for phoneNumber and countryCode.
-    h2#tests-script Writing Test Scripts
-    p
-      | Test scripts are written in javascript, and have full access to the SL object. The SL object has an array named tests (accessed through SL.tests). Simply
-        assign anything that can be evaluated to a boolean to SL.tests['name of my test'] and it will be added to the scenario's tests. You can also assign variables
-        dynamically in test scripts, for example SL.variables.foo = 'bar';
-    p
-      b To run your full test suite, click "Run Tests" in the top navigation. The button is only present if you have an app and environment selected.
-    img.full-width src='/img/tests-script.png'
+      h1#environments
+        i.fa.fa-cloud
+        | Environments
+      p In StopLight, all requests and test runs are scoped to an app and environment. You can create as many environment as you want per app.
+      h2#environments-setup Setup
+      p
+        | Once you've created and selected an app, you should see a menu item in the left nav named "Environments". Click this, and then click the + button at
+          the top of the environments pane that appears on screen. This will create a new, blank environment for your app. Give it a name, and then set it's base URL.
+          You might want to create several environments, one for testing and one for production for example, that live at different base URLs.
+      h2#environments-variables Global Variables
+      p
+        | Global variables are defined on an app, as described above. You can set global variables to values appropriate for each environment. These variables are
+          available in requests and tests using the SL.variables system. More on that below.
+      h2#environments-local Local Environments
+      p
+        | To setup a local environment, please follow the instructions available at the
+        a href='https://github.com/marbemac/stoplight-cli' target='_blank' = ' StopLight CLI Tool '
+        | repository. Once you've setup your local environment, it will show up in the list of environments like any other.
 
 
-    h1#faq FAQ
-    h3 Is StopLight Free?
-    p
-      | For now, yes (and no credit card required)! StopLight is completely free while in beta. I want to get feedback from as many users as
-        possible before making decisions on pricing. That said, there will always be a free "tier", and I will give at least 2 weeks notice
-        before StopLight goes out of beta. I look forward to working with everybody to create a truly useful API tool.
-    h3 What about API authentication, and team support, and X,Y,Z?
-    p
-      | It's coming! If you are particularly excited about a feature please do let me know on Twitter
-      a href='https://twitter.com/stoplightio' target='_blank' = ' @stoplightio.'
-      | It's good to know what's important to people.
-    h3 How secure is StopLight?
-    p
-      | All data is sent over SSL. This includes the StopLight API itself, the Dashboard, and the CLI tool.
-    h3 More questions?
-    p
-      | Ask ask away on Twitter and I'll add them here!
+      h1#endpoints
+        i.fa.fa-cloud-download
+        | Endpoints
+      p Endpoints represent individual HTTP resources in your API or app.
+      h2#endpoints-setup Setup
+      p
+        | Once you've created and selected an app, you should see a menu item in the left nav named "Endpoints". Click this, and then click the + button at
+          the top of the endpoints pane that appears on screen. This will create a new, blank endpoint for your app.
+      h2#endpoints-uri-params URI Params
+      p
+        | Often APIs routes include dynamic parts, for example an endpoint /users/marc and /users/john. In your application you might define this route
+          as /users/:username. In StopLight, if you would like to define a parameter in the URL itself, just wrap it in {brackets}. So, the URL above would be
+          described as /users/{username} in StopLight. You can include multiple URL parameters in one endpoint URL definition.
+      img src='/img/endpoints-uri-params.png'
+      h2#endpoints-variables Variables
+      p
+        | The StopLight variable system is quite flexible. You can assign persistent variables from endpoints and tests, and use these values to build other
+          requests.
+      P
+        | To assign a variable from an endpoint request, click the + button next to the "Variables" section on the endpoint edit pane. Anything in the request
+          is available to assign. Most of the time, you will be assigning values from SL.body, which is the body of the request response (what is returned from
+          your API). So, if your API returns a JSON response of the form {token: "123"}, you could create a variable called authToken and make the value equal to
+          SL.body.token. Whenenever a request is made for this endpoint, it will save this variable if possible. SL.variables is a JSON
+          object, so you can nest variables if you wish. For example, you could assign two variables, one to user.name, and another to user.email, and it will
+          create the appropriate structure.
+      img src='/img/endpoint-variables1.png'
+      p
+        | You can use variables pretty much anywhere. For example, to build a URL using a variable SL.variables.username, just define the url as something
+          like /users/{username}, and then put SL.variables.username as the default value for that URL parameter. If the value for that variable is present,
+          it will be used to create the URL when you make a request. If you need to use variables in a header, wrap the variable in {brackets}, for
+          example "Basic {SL.variables.authToken}".
+      p
+        | If present, variables will auto-fill your request info for you. You can always erase the auto-filled values and use your own if you choose.
+      img.full-width src='/img/endpoint-variables2.png'
+      h2#endpoints-requests Requests
+      p
+        | To make a request, you must first have an active environment. In the top nav, select an environment from the dropdown. Then, navigate to an endpoint
+          and click the "Make Request" button. Once the request is completed you can browse all of the data associated with the action.
+        b = ' Anything in the SL object (SL.request, SL.body, SL.response, etc) is available when assigning variables, and in your test scripts.'
+        | A request history is available for each environment.
+      img src='/img/endpoint-requests.png'
 
-  ul.docs__nav data-spy="affix" data-offset-top="120"
-    li
-      a href='#welcome' Welcome
-      ul.nav
-        li
-          a href='#welcome-start' Getting Started
-    li
-      a href='#apps' Apps
-      ul.nav
-        li
-          a href='#apps-variables' Variables
-    li
-      a href='#environments' Environments
-      ul.nav
-        li
-          a href='#environments-setup' Setup
-        li
-          a href='#environments-variables' Variables
-        li
-          a href='#environments-local' Local Environments
-    li
-      a href='#endpoints' Endpoints
-      ul.nav
-        li
-          a href='#endpoints-setup' Setup
-        li
-          a href='#endpoints-uri-params' URI Parameters
-        li
-          a href='#endpoints-variables' Variables
-        li
-          a href='#endpoints-requests' Making Requests
-    li
-      a href='#tests' Tests
-      ul.nav
-        li
-          a href='#tests-setup' Setup
-        li
-          a href='#tests-scenarios' Scenarios
-        li
-          a href='#tests-script' Test Scripts
-    li
-      a href='#faq' FAQ
+
+      h1#tests
+        i.fa.fa-flask
+        | Tests
+      p Tests allow you to make requests against your endpoints in a particular order, under a variety of conditions and requirements.
+      h2#tests-setup Setup
+      p
+        | Once you've created a few endpoints, click the item in the left nav named "Tests". You should see your available endpoints listed here. Drag
+          and drop the endpoints to adjust the order in which they're tested.
+      h2#tests-script Scenarios
+      p
+        | Scenarios let you test an endpoint under a variety of conditions. For example, you might want to create one scenario to test wether providing
+          an inappropriate email address to the userCreate endpont returns a status code 400, and another scenario to test that it returns a user when sent valid
+          parameters.
+      p
+        | If you do not fill in values for your parameters, the default values assigned in the endpoint definition will be used. They default values are shown as
+          light placeholder text on the inputs, as shown in the image below for phoneNumber and countryCode.
+      h2#tests-script Writing Test Scripts
+      p
+        | Test scripts are written in javascript, and have full access to the SL object. The SL object has an array named tests (accessed through SL.tests). Simply
+          assign anything that can be evaluated to a boolean to SL.tests['name of my test'] and it will be added to the scenario's tests. You can also assign variables
+          dynamically in test scripts, for example SL.variables.foo = 'bar';
+      p
+        b To run your full test suite, click "Run Tests" in the top navigation. The button is only present if you have an app and environment selected.
+      img.full-width src='/img/tests-script.png'
+
+
+      h1#faq FAQ
+      h3 Is StopLight free?
+      p
+        | For now, yes (and no credit card required)! StopLight is completely free while in beta. I want to get feedback from as many users as
+          possible before making decisions on pricing. That said, there will always be a free "tier", and I will give at least 2 weeks notice
+          before StopLight goes out of beta. I look forward to working with everybody to create a truly useful API tool.
+      h3 What about API authentication, and team support, and X,Y,Z?
+      p
+        | It's coming! If you are particularly excited about a feature please do let me know on Twitter
+        a href='https://twitter.com/stoplightio' target='_blank' = ' @stoplightio.'
+        | It's good to know what's important to people.
+      h3 How secure is StopLight?
+      p
+        | All data is sent over SSL. This includes the StopLight API itself, the Dashboard, and the CLI tool.
+      h3 More questions?
+      p
+        | Ask ask away on Twitter and I'll add them here! Or you can email
+        a href='mailto:marc@stoplight.io' = ' marc@stoplight.io'
+        | .
+
+    ul.docs__nav data-spy="affix" data-offset-top="391"
+      li
+        a href='#welcome' Welcome
+        ul.nav
+          li
+            a href='#welcome-start' Getting Started
+      li
+        a href='#apps' Apps
+        ul.nav
+          li
+            a href='#apps-variables' Variables
+      li
+        a href='#environments' Environments
+        ul.nav
+          li
+            a href='#environments-setup' Setup
+          li
+            a href='#environments-variables' Variables
+          li
+            a href='#environments-local' Local Environments
+      li
+        a href='#endpoints' Endpoints
+        ul.nav
+          li
+            a href='#endpoints-setup' Setup
+          li
+            a href='#endpoints-uri-params' URI Parameters
+          li
+            a href='#endpoints-variables' Variables
+          li
+            a href='#endpoints-requests' Making Requests
+      li
+        a href='#tests' Tests
+        ul.nav
+          li
+            a href='#tests-setup' Setup
+          li
+            a href='#tests-scenarios' Scenarios
+          li
+            a href='#tests-script' Test Scripts
+      li
+        a href='#faq' FAQ
 
 = partial 'partials/footer'

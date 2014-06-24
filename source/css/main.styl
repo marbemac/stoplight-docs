@@ -83,7 +83,8 @@ a
   .sl-name
     float left
     font-size 3rem
-    line-height 5.5rem
+    line-height 5rem
+    padding-top 0.4rem
 .site-head__inner
   overflow hidden
   max-width $max-page-width
@@ -104,9 +105,13 @@ a
 
 
 .site-foot
-  margin-top 8rem
+  // margin-top 8rem
   background-color #222
   color white
+  position fixed
+  bottom 0
+  left 0
+  right 0
   a
     color white
 .site-foot__name
@@ -133,7 +138,7 @@ a
     display block
 
 
-.splash-top
+.page-header
   background-color $green
   background-image url('../img/splash-top-bg.png')
   background-repeat repeat
@@ -143,18 +148,43 @@ a
     color white
     a
       color white
-.splash-top__inner
+.page-header__inner
   max-width $max-page-width
   min-width $min-page-width
   margin auto
-  text-align center
-  padding 7rem 2rem 3rem 2rem
+.page-header--splash
+  .page-header__inner
+    text-align center
+    padding 7rem 2rem 3rem 2rem
+.page-header--docs
+.page-header--changelog
+  .page-header__inner
+    padding 10rem 2rem
+    h1
+    h2
+      color #FFF
+    h2
+      color rgba(255,255,255,0.8)
+      font-size 1.6rem
+      font-weight normal
+.page-header--docs
+  background-color #3498db
+.page-header--changelog
+  background-color #9b59b6
+
+.page-content
+  padding-bottom 8rem
+
 
 .splash__title
 .splash__subtitle
   color #FFF
 .splash__subtitle
   font-weight normal
+
+
+.js-register
+  display none
 
 
 .get-started
@@ -166,6 +196,7 @@ a
   margin-top 6rem
   padding 1rem 2rem
   text-transform uppercase
+  display none
 
 
 .invite-form
@@ -345,7 +376,7 @@ a
   max-width $max-page-width
   min-width $min-page-width
   position relative
-  margin 0 auto 20rem auto
+  margin 0 auto
   overflow hidden
   padding 0 2rem
 
@@ -396,7 +427,7 @@ a
   &.affix
     position fixed
     top 0
-    margin-left 23rem
+    margin-left 22.2rem
     left 50%
     margin-top 5rem
 
@@ -423,3 +454,31 @@ a
     margin-bottom 2rem
     &.full-width
       width 100%
+
+
+.changes__wrapper
+  max-width $max-page-width
+  min-width $min-page-width
+  position relative
+  margin 3rem auto
+  padding 4rem 2rem 0 2rem
+  h1
+    background #3498db
+.change
+  margin 4rem 0
+  position relative
+.change__caret
+  color #ddd
+  left -1.6rem
+  position absolute
+  top 0.4rem
+.change__name
+  font-size 1.6rem
+  margin-bottom 0.4rem
+.change__when
+  margin-left 0.5rem
+  font-size 1.2rem
+  color #AAA
+.change__body
+  p
+    max-width 80rem

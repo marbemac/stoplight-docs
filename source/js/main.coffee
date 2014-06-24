@@ -52,6 +52,15 @@ jQuery ->
   # END Toggle feature panes on splash page
   # ####
 
+  # show the register buttons if certain params are in the URL
+  urlHash = document.URL.split('#')
+  if urlHash.length > 1
+    urlHash = urlHash[1]
+    if urlHash == 'hn' || urlHash == 'register' || urlHash == 'betalist'
+      $('.js-register').css('display', 'inline-block')
+      $('.js-beta-invite').hide()
+
+
   $('.invite-form').submit (e) ->
     e.preventDefault()
 

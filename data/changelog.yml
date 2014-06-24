@@ -1,0 +1,33 @@
+-
+  version: "0.2.1"
+  createdAt: "6/30/14"
+  body: |
+    <p>
+      <i>NEW:</i> Basic themeing options are enabled for all apps. Click on an app to get to the edit page.
+      Here you'll find header color and remote image URL fields.
+    </p>
+    <p>
+      <i>CHANGE:</i> Updated, more compact sidebar design.
+    </p>
+    <p>
+      <i>CHANGE:</i> The variables viewer now takes up the fill screen.
+    </p>
+-
+  version: "0.2.0"
+  createdAt: "6/27/14"
+  body: |
+    <p>
+      <i>NEW:</i> Endpoint groups make it easy to organize your endpoints.
+      To create one, navigate to the endpoints pane, hover on the caret in the top right, and
+      click "+ Endpoint Group". Drag and drop endpoints into groups. Drag and drop groups to order them.
+    </p>
+    <p>
+      <i>CHANGE:</i> Add multiple tests for the same endpoint. This allows you to run a test against endpoint A,
+      then one against endpoint B, and then another one against endpoint A. Navigate to the tests pane and press the
+      "+" in the top right to add a test.
+    </p>
+-
+  version: "0.1.0"
+  createdAt: "6/16/14"
+  body: |
+    <p>Initial release. Ready to rock & roll.</p>

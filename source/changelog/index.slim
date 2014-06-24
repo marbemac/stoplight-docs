@@ -1,0 +1,26 @@
+---
+title: Changelog
+---
+
+.page-header.page-header--changelog
+  = partial 'partials/header'
+  .page-header__inner
+    h1 Changelog
+    h2 A list of highlights for every StopLight release. Not comprehensive.
+
+
+.page-content
+  .changes__wrapper
+
+    ul.changes
+      - data.changelog.each do |change|
+        li.change
+          i.change__caret.fa.fa-chevron-right
+          .change__name
+            b = "v#{change.version}"
+            span.change__when = change.createdAt
+          .change__body
+            == change.body
+
+
+= partial 'partials/footer'
