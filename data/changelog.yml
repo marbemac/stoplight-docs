@@ -1,6 +1,19 @@
 -
+  version: "0.2.2"
+  createdAt: "6/23/14"
+  body: |
+    <p>
+      <i>NEW:</i> Authentication Schemes. In the app edit pane, enable the authentication schemes your
+      app supports. Included in this update is authorization via params, headers, and HTTP basic user/password.
+      Use the SL.variables system combined with  authentication schemes to easily customize authorization on a
+      per environment basis.
+    </p>
+    <p>
+      <i>CHANGE:</i> Better error messages.
+    </p>
+-
   version: "0.2.1"
-  createdAt: "6/30/14"
+  createdAt: "6/22/14"
   body: |
     <p>
       <i>NEW:</i> Basic themeing options are enabled for all apps. Click on an app to get to the edit page.
@@ -14,7 +27,7 @@
     </p>
 -
   version: "0.2.0"
-  createdAt: "6/27/14"
+  createdAt: "6/20/14"
   body: |
     <p>
       <i>NEW:</i> Endpoint groups make it easy to organize your endpoints.
