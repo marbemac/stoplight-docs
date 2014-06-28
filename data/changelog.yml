@@ -1,4 +1,35 @@
 -
+  version: "0.3.0"
+  createdAt: "6/28/14"
+  body: |
+    <p>
+      <i>NEW: Demo apps! You'll find these demos on your apps pane, under a new "public" section.</i>
+    </p>
+    <p>
+      <i>NEW:</i> App overviews. These are markdown enabled, and give you a place to put high level docs for your app.
+    </p>
+    <p>
+      <i>NEW:</i> Save buttons in pane headers.
+    </p>
+    <p>
+      <i>CHANGE:</i> Updated the endpoint edit pane design to be easier to understand.
+    </p>
+-
+  version: "0.2.3"
+  createdAt: "6/25/14"
+  body: |
+    <p>
+      <i>NEW: Optional descriptions for endpoint parameters and headers.</i>
+    </p>
+    <p>
+      <i>NEW:</i> Underscore.js is now available for use in your test scripts. For example, to check if the
+      response body is empty, you can use _.isEmpty(SL.body).
+    </p>
+    <p>
+      <i>CHANGE:</i> Arrays are now supported in variable assignment. For example, you can assign the first
+      value of an array returned by your API like this: SL.variables.firstArrayValueInResponse = SL.body[0].
+    </p>
+-
   version: "0.2.2"
   createdAt: "6/23/14"
   body: |
