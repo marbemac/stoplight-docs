@@ -9,23 +9,29 @@ title: Home
     h1.splash__title A Powerful HTTP Testing Tool
     h4.splash__subtitle Examine, share, and test your APIs in the cloud.
 
-    a.get-started.js-register href='https://dash.stoplight.io/register' Get Started
+    .splash__cta
+      a.get-started href='https://dash.stoplight.io/register' Get Started
+      div
+        | StopLight is
+        i
+          b = ' free '
+        | while in Beta.
 
-    form.invite-form.done.js-beta-invite
-      input name='email' type='email' placeholder='Email' autocomplete='off' spellcheck='off'
-      button Request Invite
-      .no-spam secret safe. no spam. ever.
-      .invite-form__done
-        | All set! In the meantime, follow
-        a href='https://twitter.com/stoplightio' = ' @StopLightio '
-        | for updates.
+    / form.invite-form.done.js-beta-invite
+    /   input name='email' type='email' placeholder='Email' autocomplete='off' spellcheck='off'
+    /   button Request Invite
+    /   .no-spam secret safe. no spam. ever.
+    /   .invite-form__done
+    /     | All set! In the meantime, follow
+    /     a href='https://twitter.com/stoplightio' = ' @StopLightio '
+    /     | for updates.
 
     .splash__overview-img.browser
       / .url-bar
       /   .dot
       /   .address
 
-      img src='img/overview-screen.png'
+      img src='img/overview-screen.gif'
 
 .page-content
   .splash-body

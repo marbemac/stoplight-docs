@@ -1,15 +1,40 @@
 -
+  version: "0.3.2"
+  createdAt: "7/3/14"
+  body: |
+    <p>
+      <i>NEW:</i> In app documentation! <i class='fa fa-question-circle'></i> icons have been added throughout the StopLight
+      dashboard. Click these to get info on the nearby feature(s).
+    </p>
+-
+  version: "0.3.1"
+  createdAt: "6/30/14"
+  body: |
+    <p>
+      <i>NEW:</i> There's a new clone button on each endpoint in the endpoints list. Use it to erm, clone the endpoint.
+    </p>
+    <p>
+      <i>NEW:</i> Add ad-hoc parameters and headers to requests. Just click the little "+" button on the make a request pane.
+    </p>
+-
   version: "0.3.0"
   createdAt: "6/28/14"
   body: |
     <p>
-      <i>NEW: Demo apps! You'll find these demos on your apps pane, under a new "public" section.</i>
+      <i>NEW:</i> Demo apps! You'll find these demos on your apps pane, under a new "public" section.
     </p>
     <p>
       <i>NEW:</i> App overviews. These are markdown enabled, and give you a place to put high level docs for your app.
     </p>
     <p>
-      <i>NEW:</i> Save buttons in pane headers.
+      <i>NEW:</i> Save and preview buttons in pane headers.
+    </p>
+    <p>
+      <i>NEW:</i> Optional endpoint parameter & header descriptions. To edit a description, click the pencil button next
+      to the parameter on the endpoint edit pane. These are markdown enabled.
+    </p>
+    <p>
+      <i>NEW:</i> Syntax highlighting for code in markdown fields.
     </p>
     <p>
       <i>CHANGE:</i> Updated the endpoint edit pane design to be easier to understand.
