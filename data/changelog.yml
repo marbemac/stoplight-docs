@@ -1,4 +1,33 @@
 -
+  version: "0.4.2"
+  createdAt: "7/24/14"
+  body: |
+    <p>
+      <i>NEW:</i> A tutorial that covers StopLight basics by defining a simple Todo List API.
+    </p>
+-
+  version: "0.4.1"
+  createdAt: "7/22/14"
+  body: |
+    <p>
+      <i>NEW:</i> Manage team members! App admins can add/remove developers and consumers via email.
+      Developers can edit endpoints and tests. Consumers are limited to viewing the app's public documentation,
+      and sending endpoint requests.
+    </p>
+-
+  version: "0.4.0"
+  createdAt: "7/16/14"
+  body: |
+    <p>
+      <i>CHANGE:</i> Updated dashboard layout design. Higher contrast design that makes better use of space.
+    </p>
+    <p>
+      <i>CHANGE:</i> Variables are only set if the API responds with a 2xx status code.
+    </p>
+    <p>
+      <i>CHANGE:</i> A lot of bug fixes.
+    </p>
+-
   version: "0.3.2"
   createdAt: "7/3/14"
   body: |
