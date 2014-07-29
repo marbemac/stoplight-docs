@@ -1,4 +1,11 @@
 -
+  version: "0.4.3"
+  createdAt: "7/29/14"
+  body: |
+    <p>
+      <i>NEW:</i> Support for self-signed SSL certificates. 
+    </p>
+-
   version: "0.4.2"
   createdAt: "7/24/14"
   body: |
