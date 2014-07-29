@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+
+        <title>StopLight: Changelog</title>
+        <meta name="description" content="">
+        <meta name="google-site-verification" content="hzGTmpKv08ZrdPLuB8yCPmrx8LFMIhCcYpTxubMsKM8" />
+        <!-- <meta name="viewport" content="width=device-width"> -->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link href='//fonts.googleapis.com/css?family=Exo:400,700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+        <link href="/css/main-e5a9cd02.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".docs__nav">
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="page-header page-header--changelog"><div class="site-head"><div class="site-head__inner"><a href="/"><div class="sl-name">StopLight<small>Beta</small></div></a><ul class="site-head__right"><li><a href="https://dash.stoplight.io/register">Register</a></li><li class="divider">&middot;</li><li><a href="https://dash.stoplight.io">Login</a></li></ul></div></div><div class="page-header__inner"><h1>Changelog</h1><h2>A list of highlights for every StopLight release. Not comprehensive.</h2></div></div><div class="page-content"><div class="changes__wrapper"><ul class="changes"><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.4.3</b><span class="change__when">7/29/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> Support for self-signed SSL certificates. 
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.4.2</b><span class="change__when">7/24/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> A tutorial that covers StopLight basics by defining a simple Todo List API.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.4.1</b><span class="change__when">7/22/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> Manage team members! App admins can add/remove developers and consumers via email.
+  Developers can edit endpoints and tests. Consumers are limited to viewing the app's public documentation,
+  and sending endpoint requests.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.4.0</b><span class="change__when">7/16/14</span></div><div class="change__body"><p>
+  <i>CHANGE:</i> Updated dashboard layout design. Higher contrast design that makes better use of space.
+</p>
+<p>
+  <i>CHANGE:</i> Variables are only set if the API responds with a 2xx status code.
+</p>
+<p>
+  <i>CHANGE:</i> A lot of bug fixes.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.3.2</b><span class="change__when">7/3/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> In app documentation! <i class='fa fa-question-circle'></i> icons have been added throughout the StopLight
+  dashboard. Click these to get info on the nearby feature(s).
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.3.1</b><span class="change__when">6/30/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> There's a new clone button on each endpoint in the endpoints list. Use it to erm, clone the endpoint.
+</p>
+<p>
+  <i>NEW:</i> Add ad-hoc parameters and headers to requests. Just click the little "+" button on the make a request pane.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.3.0</b><span class="change__when">6/28/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> Demo apps! You'll find these demos on your apps pane, under a new "public" section.
+</p>
+<p>
+  <i>NEW:</i> App overviews. These are markdown enabled, and give you a place to put high level docs for your app.
+</p>
+<p>
+  <i>NEW:</i> Save and preview buttons in pane headers.
+</p>
+<p>
+  <i>NEW:</i> Optional endpoint parameter & header descriptions. To edit a description, click the pencil button next
+  to the parameter on the endpoint edit pane. These are markdown enabled.
+</p>
+<p>
+  <i>NEW:</i> Syntax highlighting for code in markdown fields.
+</p>
+<p>
+  <i>CHANGE:</i> Updated the endpoint edit pane design to be easier to understand.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.2.3</b><span class="change__when">6/25/14</span></div><div class="change__body"><p>
+  <i>NEW: Optional descriptions for endpoint parameters and headers.</i>
+</p>
+<p>
+  <i>NEW:</i> Underscore.js is now available for use in your test scripts. For example, to check if the
+  response body is empty, you can use _.isEmpty(SL.body).
+</p>
+<p>
+  <i>CHANGE:</i> Arrays are now supported in variable assignment. For example, you can assign the first
+  value of an array returned by your API like this: SL.variables.firstArrayValueInResponse = SL.body[0].
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.2.2</b><span class="change__when">6/23/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> Authentication Schemes. In the app edit pane, enable the authentication schemes your
+  app supports. Included in this update is authorization via params, headers, and HTTP basic user/password.
+  Use the SL.variables system combined with  authentication schemes to easily customize authorization on a
+  per environment basis.
+</p>
+<p>
+  <i>CHANGE:</i> Better error messages.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.2.1</b><span class="change__when">6/22/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> Basic themeing options are enabled for all apps. Click on an app to get to the edit page.
+  Here you'll find header color and remote image URL fields.
+</p>
+<p>
+  <i>CHANGE:</i> Updated, more compact sidebar design.
+</p>
+<p>
+  <i>CHANGE:</i> The variables viewer now takes up the fill screen.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.2.0</b><span class="change__when">6/20/14</span></div><div class="change__body"><p>
+  <i>NEW:</i> Endpoint groups make it easy to organize your endpoints.
+  To create one, navigate to the endpoints pane, hover on the caret in the top right, and
+  click "+ Endpoint Group". Drag and drop endpoints into groups. Drag and drop groups to order them.
+</p>
+<p>
+  <i>CHANGE:</i> Add multiple tests for the same endpoint. This allows you to run a test against endpoint A,
+  then one against endpoint B, and then another one against endpoint A. Navigate to the tests pane and press the
+  "+" in the top right to add a test.
+</p>
+</div></li><li class="change"><i class="change__caret fa fa-chevron-right"></i><div class="change__name"><b>v0.1.0</b><span class="change__when">6/16/14</span></div><div class="change__body"><p>Initial release. Ready to rock & roll.</p>
+</div></li></ul></div></div><div class="site-foot"><div class="site-foot__inner"><a class="site-foot__name" href="/">StopLight</a><ul class="site-foot__right"><li><a href="https://twitter.com/stoplightio">@StopLightio</a></li><li class="divider">&middot;</li><li><a href="https://facebook.com/stoplightio"><i class="fa fa-facebook-square"></i>StopLight</a></li><li class="divider">&middot;</li><li><a href="/changelog">Changelog</a></li><li class="divider">&middot;</li><li><a href="https://dash.stoplight.io/register">Register</a></li><li class="divider">&middot;</li><li><a href="https://dash.stoplight.io">Login</a></li></ul></div></div>
+
+        <script src="/js/main-0d249a25.js" type="text/javascript"></script>
+
+        <!-- begin olark code -->
+        <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+        f[z]=function(){
+        (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+        },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+        f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+        0:+new Date};a.P=function(u){
+        a.p[u]=new Date-a.p[0]};function s(){
+        a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+        hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+        return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+        b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+        b.contentWindow[g].open()}catch(w){
+        c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+        var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+        b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+        loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+        /* custom configuration goes here (www.olark.com/documentation) */
+        olark.identify('6104-940-10-6062');/*]]>*/</script><noscript><a href="https://www.olark.com/site/6104-940-10-6062/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+        <!-- end olark code -->
+
+            <!-- Segment.io -->
+            <script type="text/javascript">
+                window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+                window.analytics.load("gi1l52ie2o");
+                window.analytics.page();
+            </script>
+    </body>
+</html>
