@@ -1,4 +1,22 @@
 -
+  version: "0.4.4"
+  createdAt: "8/4/14"
+  body: |
+    <p>
+      <i>CHANGE:</i> Streamlined app creation. The first environment and endpont are now created automatically for you when you create an app.
+    </p>
+    <p>
+      <i>CHANGE:</i> Smarter defaults. When you select an app, the first available environment will be set as active automatically. Auth methods
+      are set by default for every environment (if not already set) when added to an app. SL.variables are automatically created when setting auth
+      methods on apps.
+    </p>
+    <p>
+      <i>CHANGE:</i> Underscores and dashes are now allowed in parameter names.
+    </p>
+    <p>
+      <i>CHANGE:</i> Numerous bug fixes, including the pesky stuck in the run queue bug.
+    </p>
+-
   version: "0.4.3"
   createdAt: "7/29/14"
   body: |
