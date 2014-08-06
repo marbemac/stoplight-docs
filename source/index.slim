@@ -2,6 +2,8 @@
 title: Home
 ---
 
+.splash__header-bg
+
 .page-header.page-header--splash
   = partial 'partials/header'
 
@@ -17,15 +19,6 @@ title: Home
           b = ' free '
         | while in Beta.
 
-    / form.invite-form.done.js-beta-invite
-    /   input name='email' type='email' placeholder='Email' autocomplete='off' spellcheck='off'
-    /   button Request Invite
-    /   .no-spam secret safe. no spam. ever.
-    /   .invite-form__done
-    /     | All set! In the meantime, follow
-    /     a href='https://twitter.com/stoplightio' = ' @StopLightio '
-    /     | for updates.
-
     .splash__overview-img.browser
       .url-bar
         .dot
@@ -33,129 +26,46 @@ title: Home
 
       img src='img/overview-screen.jpg'
 
-.page-content
-  .splash-body
-    ul.splash-body__header
-      li.on Environments
-      li Endpoints
-      li Tests
+.page-content.page-content--splash
+  br 
+  .splash-feature.first
+    .splash-feature__inner
+      .splash-feature__content
+        h2 Easy request inspection.
+        p Explore request/response data, and debug your APIs with ease. A recent request history is available for each endpoint and environment.
+      .splash-feature__img
+        img src='img/feature-requests.png'
+  .splash-feature
+    .splash-feature__inner
+      .splash-feature__content
+        h2 Work with your team.
+        p 
+          | Invite users by email, either as a developer or a consumer of your API. Everything in StopLight is updated in real-time, so you can collaborate and debug requests together.
+      .splash-feature__img
+        img.sl-small src='img/feature-team.png'
+  .splash-feature
+    .splash-feature__inner
+      .splash-feature__content
+        h2 Auto documenting.
+        p Documentation is created automatically as you define your API in StopLight. Invite clients or consumers to explore your API.
+      .splash-feature__img
+        img src='img/feature-docs.png'
+  .splash-feature
+    .splash-feature__inner
+      .splash-feature__content
+        h2 Simple yet powerful tests.
+        p 
+          | Test your APIs with real requests. Define test scenarios and assertions. Pass state between tests and requests with the fexible SL.variables system. Run  all your tests with a single click.
+      .splash-feature__img
+        img src='img/feature-tests.png'
 
-    ul.splash-body__groups
-      li.on
-        ul.splash-body__features
-          li
-            h4 Local
-            .splash-body__features__mark 1
-            .feature
-              p
-                | Easily connect your local
-                  environments with the
-                a href='https://github.com/marbemac/stoplight-cli' target='_blank' = ' StopLight CLI tool.'
-          li
-            h4 Environment Variables
-            .splash-body__features__mark 2
-            .feature
-              p
-                | Use the StopLight variables
-                  system to set environment
-                  specific variables for use
-                  in your requests and tests.
-
-        .splash-feature-pane
-          img src='img/feature-pane-environments.png'
-          ul.feature-pane__marks
-            li.feature-pane-1-1 1
-            li.feature-pane-1-2 2
-      li
-        ul.splash-body__features
-          li
-            h4 Endpoints
-            .splash-body__features__mark 1
-            .feature
-              p ... are HTTP resources.
-          li
-            h4 Variables
-            .feature
-              .splash-body__features__mark 2
-              p
-                | Use variables anywhere.
-                  Parameters, headers, tests.
-            .feature
-              .splash-body__features__mark 3
-              p
-                | Set variables using any
-                  data present in the request.
-                  Variables are scoped to the
-                  current user and environment.
-            .feature
-              .splash-body__features__mark 4
-              p
-                | Variables auto fill if present
-                  in the current environment.
-          li
-            h4 History
-            .splash-body__features__mark 5
-            .feature
-              p
-                | View an endpoint’s request
-                  history for the current
-                  environment.
-
-        .splash-feature-pane
-          img src='img/feature-pane-endpoints.png'
-          ul.feature-pane__marks
-            li.feature-pane-2-1 1
-            li.feature-pane-2-2 2
-            li.feature-pane-2-3 3
-            li.feature-pane-2-4 4
-            li.feature-pane-2-5 5
-
-      li
-        ul.splash-body__features
-          li
-            h4 Test Order
-            .splash-body__features__mark 1
-            .feature
-              p
-                | Drag and drop to update the
-                  order in which tests are run.
-                  Variables persist between tests.
-          li
-            h4 Scenarios
-            .splash-body__features__mark 2
-            .feature
-              p
-                | Create scenarios to test your
-                  endpoints under a variety
-                  of conditions.
-          li
-            h4 Tests
-            .feature
-              .splash-body__features__mark 3
-              p
-                | Write simple test scripts in
-                  javascript. Scripts have access
-                  to a special object, “SL”, that
-                  contains request, response,
-                  and variables data.
-            .feature
-              .splash-body__features__mark 4
-              p
-                | View the test history for the
-                  current environment.
-            .feature
-              i.splash-body__features__star.fa.fa-star
-              p
-                | Run your entire test suite
-                  with one click, for any
-                  environment.
-
-        .splash-feature-pane
-          img src='img/feature-pane-tests.png'
-          ul.feature-pane__marks
-            li.feature-pane-3-1 1
-            li.feature-pane-3-2 2
-            li.feature-pane-3-3 3
-            li.feature-pane-3-4 4
+  .splash-body    
+    .splash__cta
+      a.get-started href='https://dash.stoplight.io/register' Get Started
+      div
+        | StopLight is
+        i
+          b = ' free '
+        | while in Beta.        
 
 = partial 'partials/footer'
